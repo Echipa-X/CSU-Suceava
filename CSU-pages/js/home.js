@@ -12,16 +12,16 @@ document.addEventListener('DOMContentLoaded', function () {
         // Redirecționează către pagina corespunzătoare în funcție de textul butonului
         switch (buttonText) {
           case 'JUCATORI':
-            window.location.href = 'players1.html'; // Schimbă cu numele real al paginii CLUB
+            window.location.href = '/CSU-pages/html/players1.html'; // Schimbă cu numele real al paginii CLUB
             break;
           case 'CLUB':
-            window.location.href = 'club.html';
+            window.location.href = '/CSU-pages/html/club.html';
             break;
             case 'CALENDAR':
-              window.location.href = 'nextfixtures.html';
+              window.location.href = '/CSU-pages/html/nextfixtures.html';
               break;
               case 'NOUTATI':
-                window.location.href = 'news.html';
+                window.location.href = '/CSU-pages/html/news.html';
                 break;
           // Adaugă cazuri pentru celelalte pagini
         }

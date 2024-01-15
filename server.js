@@ -63,6 +63,6 @@ app.use(express.static(__dirname));
 
 // Definește ruta pentru fișierul home.html
 app.get('/', (req, res) => {
-  res.sendFile(path.join(__dirname, 'home.html'));
+  res.sendFile(path.join(__dirname, '/CSU-pages/html/home.html'));
 });
 

@@ -2,6 +2,8 @@ const express = require('express');
 const mongoose = require('mongoose');
 const bodyParser = require('body-parser');
 
+const User = require('./models/User'); 
+
 // Importă routerele pentru entitățile respective
 const jucatorRouter = require('./routes/jucator');
 const echipaRouter = require('./routes/echipa');
@@ -24,7 +26,6 @@ mongoose.connect('mongodb://localhost:27017/CSU_Suceava_DataBase', {
   useNewUrlParser: true,
   useUnifiedTopology: true
 });
-
 // Middleware pentru a parsa corpul cererii în format JSON
 app.use(bodyParser.json());
 
@@ -42,7 +43,41 @@ app.use('/roluri', rolRouter);
 app.use('/personal', personalRouter);
 app.use('/log_in', logInRouter);
 
-// Alte rute pentru alte entități sau alte acțiuni
+app.post('/signup', async (req, res) => {
+  const { name, email, password } = req.body;
+  console.log('Received data:', name, email, password);
+
+  try {
+    const newUser = new User({ name, email, password });
+    await newUser.save();
+    res.status(201).json({ message: 'Utilizator înregistrat cu succes!' });
+  } catch (error) {
+    console.error('Eroare la înregistrare:', error);
+    res.status(500).json({ message: 'Eroare la înregistrare', error: error.message });
+  }
+});
+
+app.post('/login', async (req, res) => {
+  const { email, password } = req.body;
+
+  try {
+    // Verificăm în baza de date dacă există un utilizator cu adresa de email și parola furnizate
+    const user = await User.findOne({ email, password });
+
+    if (user) {
+      res.status(200).json({ message: 'Autentificare cu succes!' });
+    } else {
+      res.status(401).json({ message: 'Autentificare eșuată. Verificați adresa de email și parola.' });
+    }
+  } catch (error) {
+    console.error('Eroare la autentificare:', error);
+    res.status(500).json({ message: 'Eroare la autentificare', error: error.message });
+  }
+});
+
+
+// ... Restul codului din server.js
+
 
 // Rulare server
 app.listen(port, () => {
@@ -65,4 +100,3 @@ app.use(express.static(__dirname));
 app.get('/', (req, res) => {
   res.sendFile(path.join(__dirname, '/CSU-pages/html/home.html'));
 });
-

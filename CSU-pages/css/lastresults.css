@@ -1,10 +1,24 @@
 .last-results-page {
-    display: inline-flex;
-    flex-direction: column;
-    align-items: flex-start;
-    position: relative;
-    background-color: #ffffff;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 100%;
   }
+
+  body {
+    /* overflow: hidden;  */
+   /* width: 100%; */
+   height: 100%;
+   position: relative;
+   background-color:  #6f6fa7;
+ }
+
+ .last-results-page .divv {
+  overflow: hidden;
+  width: 1440px;
+  height: 1900px;
+  position: relative;
+}
   
   .last-results-page .nav-bar {
     display: flex;
@@ -14,9 +28,13 @@
     justify-content: center;
     gap: 62px;
     padding: 12px 0px;
-    position: relative;
+    top: 7px;
+    left: (100% - 1440px) /2;
     background-color: #d5d5e8;
     overflow: hidden;
+    position: fixed;
+    box-shadow:0 4px 6px #3f3f95;
+    z-index: 1; 
   }
   
   .last-results-page .butoane {
@@ -34,6 +52,13 @@
   }
   
   .last-results-page .img {
+    position: relative;
+    width: 48px;
+    height: 48px;
+    object-fit: cover;
+  }
+
+  .last-results-page .img-sigla {
     position: relative;
     width: 85px;
     height: 85px;
@@ -111,12 +136,14 @@
     display: flex;
     flex-direction: column;
     width: 1440px;
+    height: 176px;
     align-items: center;
     justify-content: center;
     gap: 13px;
-    padding: 10px 0px;
-    position: relative;
-    flex: 0 0 auto;
+    padding: 40px 0px;
+    position: absolute;
+    top: 134px;
+    /* left: 0; */
     background-color: #6f6fa7;
     box-shadow: 0px 4px 4px #00000040;
   }
@@ -178,11 +205,13 @@
     width: 1440px;
     align-items: center;
     justify-content: center;
-    gap: 20px;
-    padding: 35px 200px;
-    position: relative;
+    gap: 30px;
+    /* padding: 0px 200px 50px; */
+    position: absolute;
     flex: 0 0 auto;
     background-color: #d5d5e8;
+    top:390px;
+    height: 1150px;
   }
   
   .last-results-page .frame {
@@ -464,60 +493,165 @@
     flex: 0 0 auto;
     background-color: #6f6fa7;
     box-shadow: 0px 4px 4px #00000040;
+    top:1540px;
+    height:50px;
   }
   
   .last-results-page .pepenero {
     position: relative;
-    width: 159.13px;
-    height: 50px;
+    width: 150px;
+    height: 40px;
+    /* top: 30px; */
     object-fit: cover;
+    transition: transform 0.3s ease-in-out;
   }
+
+  .last-results-page .pepenero:hover {
+    transform: scale(1.1);
+    }
   
   .last-results-page .mihu {
     position: relative;
-    width: 158.03px;
-    height: 50px;
+    width: 180px;
+    height: 60px;
+    /* top: 30px; */
     object-fit: cover;
+    transition: transform 0.3s ease-in-out;
   }
+
+  .last-results-page .mihu:hover {
+    transform: scale(1.1);
+    }
+  
   
   .last-results-page .celestin {
     position: relative;
-    width: 184.05px;
-    height: 50px;
+    /* width: 280px;
+    height: 90px; */
+    /* top: 30px; */
     object-fit: cover;
+    transition: transform 0.3s ease-in-out;
   }
+
+  .last-results-page .celestin:hover {
+    transform: scale(1.1);
+    }
+  
   
   .last-results-page .vivendi {
     position: relative;
-    width: 127.11px;
-    height: 50px;
+    width: 160px;
+    height: 60px;
     object-fit: cover;
+    /* top: 30px; */
+    transition: transform 0.3s ease-in-out;
   }
+
+  .last-results-page .vivendi:hover {
+    transform: scale(1.1);
+    }
   
   .last-results-page .iulius-mall {
     position: relative;
     width: 89.52px;
     height: 107px;
+    /* top: -10px; */
     object-fit: cover;
+    transition: transform 0.3s ease-in-out;
   }
+
+  .last-results-page .iulius-mall:hover {
+    transform: scale(1.1);
+    }
   
   .last-results-page .urban {
     position: relative;
-    width: 270px;
-    height: 107px;
+    /* width: 270px;
+    height: 107px; */
     object-fit: cover;
+    /* top: 30px; */
+    transition: transform 0.3s ease-in-out;
   }
+
+  .last-results-page .urban:hover {
+    transform: scale(1.1);
+    }
+
+    .last-results-page .facebook {
+      position: relative;
+      width: 48px;
+      height: 48px;
+      transition: transform 0.3s ease-in-out;
+    }
+  
+    .last-results-page .facebook:hover {
+      transform: scale(1.1);
+    }
+  
+    .last-results-page .instagram {
+      position: relative;
+      width: 48px;
+      height: 48px;
+      transition: transform 0.3s ease-in-out;
+    }
+  
+    .last-results-page .instagram:hover {
+      transform: scale(1.1);
+    }
+  
+    .last-results-page .youtube {
+      position: relative;
+      width: 48px;
+      height: 48px;
+      transition: transform 0.3s ease-in-out;
+    }
+  
+    .last-results-page .youtube:hover {
+      transform: scale(1.1);
+    }
+  
+    .last-results-page .twitter {
+      position: relative;
+      width: 48px;
+      height: 48px;
+      transition: transform 0.3s ease-in-out;
+    }
+  
+    .last-results-page .twitter:hover {
+      transform: scale(1.1);
+    }
+  
+    .last-results-page .tik_tok {
+      position: relative;
+      width: 48px;
+      height: 48px;
+      transition: transform 0.3s ease-in-out;
+    }
+  
+    .last-results-page .tik_tok:hover {
+      transform: scale(1.1);
+    }
   
   .last-results-page .subsol {
     display: flex;
     width: 1440px;
-    height: 255px;
+    height: 150px;
     align-items: center;
     justify-content: center;
     gap: 102px;
     padding: 40px 0px;
-    position: relative;
+    position: absolute;
     background-color: #d5d5e8;
+    top:1670px;
+    left:0;
+  }
+  
+  .last-results-page .text-wrapper:hover {
+    color: #82d5e8; /* Change the color on hover */
+  }
+
+  .last-results-page .text-wrapper-3:hover {
+    color: #82d5e8; /* Change the color on hover */
   }
   
   .last-results-page .sigla-wrapper {

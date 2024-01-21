@@ -10,7 +10,7 @@
     /* background-color: #ffffff; */
     overflow: hidden;
     width: 1440px;
-    height: 1314px;
+    height: 2050px;
     position: relative;
   }
 
@@ -21,21 +21,17 @@
     position: relative;
     background-color:  #6f6fa7;
   }
-  
-  .club-page .subsol {
+  .club-page .frame-1 {
     display: flex;
-    width: 1440px;
-    height: 255px;
+    width: 1050px;
+    gap: 20px;
+    padding: 10px 0px;
+    flex: 0 0 auto;
     align-items: center;
-    justify-content: center;
-    gap: 102px;
-    padding: 40px 0px;
-    position: absolute;
-    top: 1059px;
-    left: 0;
-    background-color: #d5d5e8;
+    position: relative;
+    right:250px;
   }
-  
+
   .club-page .frame {
     display: inline-flex;
     align-items: center;
@@ -46,6 +42,223 @@
     margin-top: -1.5px;
     margin-bottom: -1.5px;
   }
+  
+  .club-page .text-wrapper-4 {
+    position: relative;
+    width: fit-content;
+    font-family: "Poppins-Light", Helvetica;
+    font-weight: 300;
+    color: #000000;
+    font-size: 20px;
+    letter-spacing: -1.2px;
+    line-height: normal;
+  }
+
+  .club-page .frame-2 {
+    display: inline-flex;
+    justify-content: center;
+    gap: 10px;
+    padding: 10px;
+    flex: 0 0 auto;
+    background-color: #6f6fa7;
+    align-items: center;
+    position: relative;
+    right:-10px;
+  }
+
+  .club-page .text-wrapper-5 {
+    position: relative;
+    width: fit-content;
+    margin-top: -1px;
+    font-family: "Poppins-Light", Helvetica;
+    font-weight: 300;
+    color: #ffffff;
+    font-size: 20px;
+    letter-spacing: -1.2px;
+    line-height: normal;
+  }
+
+  .club-page .vector-3 {
+    position: relative;
+    width: 18px;
+    height: 10px;
+    margin-right: -0.5px;
+  }
+  
+  .club-page .frame-3 {
+    display: flex;
+    width: 131px;
+    justify-content: center;
+    gap: 10px;
+    padding: 10px;
+    background-color: #6f6fa7;
+    align-items: center;
+    position: relative;
+    right:300px;
+  }
+  
+  .club-page .vector-4 {
+    position: relative;
+    width: 18px;
+    height: 10px;
+  }
+  
+  .club-page .frame-4 {
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    padding: 10px 0px;
+    position: relative;
+    flex: 0 0 auto;
+    right:190px;
+  }
+  
+  .club-page .text-wrapper-6 {
+    position: relative;
+    width: 1050px;
+    margin-top: -1px;
+    font-family: "Poppins-Bold", Helvetica;
+    font-weight: 700;
+    color: #3f3f95;
+    font-size: 40px;
+    letter-spacing: -2.4px;
+    line-height: normal;
+  }
+  
+  .club-page .meci-viitor {
+    display: flex;
+    width: 1050px;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    position: relative;
+    flex: 0 0 auto;
+    border-top-width: 0.5px;
+    border-top-style: solid;
+    border-color: #3e3e95;
+  }
+  
+  .club-page .data {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 10px;
+    position: relative;
+    flex: 0 0 auto;
+    margin-left: -8.5px;
+  }
+  
+  .club-page .image {
+    width: 75px;
+    height: 75px;
+    position: relative;
+    object-fit: cover;
+  }
+  
+  .club-page .frame-5 {
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 2px;
+    flex: 0 0 auto;
+    align-items: center;
+    position: relative;
+  }
+  
+  .club-page .data-2 {
+    margin-top: -1px;
+    position: relative;
+    width: fit-content;
+    font-family: "Poppins-Medium", Helvetica;
+    font-weight: 500;
+    color: #1e1e1e;
+    font-size: 20px;
+    letter-spacing: 0;
+    line-height: normal;
+  }
+  
+  .club-page .data-3 {
+    position: relative;
+    width: fit-content;
+    font-family: "Poppins-Medium", Helvetica;
+    font-weight: 500;
+    color: #1e1e1e;
+    font-size: 20px;
+    letter-spacing: 0;
+    line-height: normal;
+  }
+
+  .club-page .frame-6 {
+    display: flex;
+    width: 791px;
+    justify-content: center;
+    gap: 40px;
+    padding: 10px;
+    margin-right: -8.5px;
+    align-items: center;
+    position: relative;
+  }
+  
+  .club-page .echipa {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    position: relative;
+    flex: 0 0 auto;
+  }
+  
+  .club-page .text-wrapper-7 {
+    position: relative;
+    width: fit-content;
+    font-family: "Poppins-Bold", Helvetica;
+    font-weight: 700;
+    color: #000000;
+    font-size: 24px;
+    letter-spacing: 0;
+    line-height: normal;
+  }
+
+  .club-page .img {
+    position: relative;
+    width: 85px;
+    height: 85px;
+    object-fit: cover;
+  }
+
+  .club-page .text-wrapper-8 {
+    position: relative;
+    width: fit-content;
+    margin-top: -1px;
+    font-family: "Poppins-Bold", Helvetica;
+    font-weight: 700;
+    color: #ffffff;
+    font-size: 24px;
+    letter-spacing: 0;
+    line-height: normal;
+  }
+
+
+  
+
+  .club-page .subsol {
+    display: flex;
+    width: 1440px;
+    height: 255px;
+    align-items: center;
+    justify-content: center;
+    gap: 102px;
+    padding: 40px 0px;
+    position: absolute;
+    top: 1790px;
+    left: 0;
+    background-color: #d5d5e8;
+  }
+  
+  
   
   .club-page .sigla {
     position: relative;
@@ -161,15 +374,16 @@
   .club-page .parteneri {
     display: flex;
     width: 1440px;
-    height:140px;
+    height:100px;
     align-items: center;
     justify-content: center;
     gap: 57px;
     padding: 40px 0px;
     position: relative;
-    top: 872px;
+    flex: 0 0 auto;
     background-color: #6f6fa7;
     box-shadow: 0px 4px 4px #00000040;
+    top:1640px;
   }
   
   .club-page .pepenero {
@@ -256,13 +470,13 @@
     display: flex;
     flex-direction: column;
     width: 1440px;
-    height: 582px;
+    height: 1280px;
     align-items: center;
     justify-content: center;
     gap: 20px;
     padding: 35px 200px;
     position: absolute;
-    top: 290px;
+    top: 340px;
     left: 0;
     background-color: #d5d5e8;
   }
@@ -335,7 +549,7 @@
     box-shadow: 0px 4px 4px #00000040;
   }
   
-  .club-page .text-wrapper-4 {
+  .club-page .text-wrapper-4-1 {
     position: relative;
     width: 1067px;
     margin-top: -31.5px;
@@ -370,7 +584,7 @@
     border-color: #3f3f95;
   }
   
-  .club-page .text-wrapper-5 {
+  .club-page .text-wrapper-5-1 {
     position: relative;
     width: fit-content;
     font-family: "Poppins-Bold", Helvetica;
@@ -381,7 +595,7 @@
     line-height: normal;
   }
 
-  .club-page .text-wrapper-5:hover{
+  .club-page .text-wrapper-5-1:hover{
     color: #82d5e8;
   }
   
@@ -440,7 +654,7 @@
     margin-bottom: -11.5px;
   }
   
-  .club-page .text-wrapper-6 {
+  .club-page .text-wrapper-6-1 {
     position: relative;
     width: fit-content;
     font-family: "Poppins-Bold", Helvetica;
@@ -451,7 +665,7 @@
     line-height: normal;
   }
 
-  .club-page .text-wrapper-6:hover {
+  .club-page .text-wrapper-6-1:hover {
     color: #82d5e8; /* Change the color on hover */
   }
   

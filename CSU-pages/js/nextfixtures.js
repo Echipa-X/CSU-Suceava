@@ -11,7 +11,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
         // Redirecționează către pagina corespunzătoare în funcție de textul butonului
         switch (buttonText) {
-          case 'JUCATORI':
+          case 'PERSONAL':
             window.location.href = '/CSU-pages/html/players1.html'; // Schimbă cu numele real al paginii CLUB
             break;
           case 'CLUB':

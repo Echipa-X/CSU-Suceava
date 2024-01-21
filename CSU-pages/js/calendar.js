@@ -5,7 +5,7 @@ document.addEventListener('DOMContentLoaded', function () {
     // Adaugă un ascultător de eveniment de clic pe bara de navigare
     navbar.addEventListener('click', function (event) {
       // Verifică dacă elementul pe care s-a făcut clic este un element "div" cu clasa "text-wrapper-9"
-      if (event.target.tagName === 'DIV' && event.target.classList.contains('text-wrapper')) {
+      if (event.target.tagName === 'DIV' && event.target.classList.contains('text-wrapper-6-1')) {
         // Obține textul din interiorul elementului pe care s-a făcut clic
         var buttonText = event.target.innerText;
 
@@ -31,18 +31,40 @@ document.addEventListener('DOMContentLoaded', function () {
       }
     });
 
-    
+    var navbar = document.getElementById('club-tab');
+
+    // Adaugă un ascultător de eveniment de clic pe bara de navigare
+    navbar.addEventListener('click', function (event) {
+      // Verifică dacă elementul pe care s-a făcut clic este un element "div" cu clasa "text-wrapper-9"
+      if (event.target.tagName === 'DIV' && event.target.classList.contains('text-wrapper-5-1')) {
+        // Obține textul din interiorul elementului pe care s-a făcut clic
+        var buttonText = event.target.innerText;
+
+        // Redirecționează către pagina corespunzătoare în funcție de textul butonului
+        switch (buttonText) {
+          case 'Meciuri viitoare':
+            window.location.href = '/CSU-pages/html/calendar.html'; // Schimbă cu numele real al paginii CLUB
+            break;
+          case 'Ultimele rezultate':
+            window.location.href = '/CSU-pages/html/lastresults.html';
+            break;
+          // Adaugă cazuri pentru celelalte pagini
+        }
+      }
+    });
+
     var home_page = document.getElementById('home_page');
 
     // Adaugă un ascultător de eveniment de clic pe bara de navigare
     home_page.addEventListener('click', function (event) {
       // Verifică dacă elementul pe care s-a făcut clic este un element "div" cu clasa "text-wrapper-9"
-      if (event.target.tagName === 'IMG' && event.target.classList.contains('sigla')) {
+      if (event.target.tagName === 'IMG' && event.target.classList.contains('sigla-2')) {
         // Obține textul din interiorul elementului pe care s-a făcut clic
         window.location.href = '/CSU-pages/html/home.html';
       }
     });
 
+    /*redirectionare parteneri */
     var sponsor_pepenero = document.getElementById('parteneri');
     sponsor_pepenero.addEventListener('click', function (event) {
       if (event.target.tagName === 'IMG' && event.target.classList.contains('pepenero')) {
@@ -99,6 +121,29 @@ document.addEventListener('DOMContentLoaded', function () {
             window.location.href = 'https://www.youtube.com/@CSUSuceava'; 
       }
     });
+
+    var youtube = document.getElementById('club-tab');
+    youtube.addEventListener('click', function (event) {
+      if (event.target.tagName === 'DIV' && event.target.classList.contains('text-wrapper-5')) {
+        var buttonText = event.target.innerText;
+
+        // Redirecționează către pagina corespunzătoare în funcție de textul butonului
+        switch (buttonText) {
+          case 'Viziune':
+            window.location.href = '/CSU-pages/html/club.html'; // Schimbă cu numele real al paginii CLUB
+            break;
+          case 'Istorie':
+            window.location.href = '/CSU-pages/html/istorie.html';
+            break;
+          case 'Trofee':
+            window.location.href = '/CSU-pages/html/trofee.html';
+            break;        
+          // Adaugă cazuri pentru celelalte pagini
+        }
+      }
+    });
+    
+
   });
   function changeColor(id)
 {

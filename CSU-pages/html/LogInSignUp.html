@@ -1,0 +1,105 @@
+<!-- CSU-pages/html/LogInSignUp.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/CSU-pages/css/LogInSignUp.css">
+  <title>Login/Sign Up</title>
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <div class="title-container">
+        <div class="title" id="signupTitle" onclick="toggleForm('signup',this)">Sign Up</div>
+        <div class="divider">|</div>
+        <div class="title" id="loginTitle" onclick="toggleForm('login',this)">Log In</div>
+      </div>
+      <div class="underline" id="underline"></div>
+    </div>
+    <div class="inputs">
+        <div class="input" id="nameInputContainer">
+            <img src="/CSU-pages/imagini/person.png" alt="">
+            <input type="text" id="nameInput" placeholder="Name">
+          </div>
+      <div class="input" id="emailInputContainer">
+        <img src="/CSU-pages/imagini/email.png" alt="">
+        <input type="email" id="emailInput" placeholder="Email">
+      </div>
+      <div class="input">
+        <img src="/CSU-pages/imagini/password.png" alt="">
+        <input type="password" id="passwordInput" placeholder="Password">
+      </div>
+    </div>
+    <div class="submit-container">
+      <div class="submit gray" onclick="myFunction('signup')">Sign Up</div>
+      <div class="submit" onclick="myFunction('login')">Log In</div>
+    </div>
+
+    <script>
+      function toggleForm(action) {
+        const signUpText = document.querySelector('.title:nth-child(1)');
+        const logInText = document.querySelector('.title:nth-child(3)');
+        const underline = document.getElementById('underline');
+        const nameInput = document.getElementById('nameInput');
+        const emailInputContainer = document.getElementById('emailInputContainer');
+        const passwordInput = document.getElementById('passwordInput');
+        
+   if (action === 'signup') {
+    signUpText.classList.add('active');
+    logInText.classList.remove('active');
+    nameInputContainer.style.display = 'block'; // Afiseaza caseta cu numele
+  } else if (action === 'login') {
+    signUpText.classList.remove('active');
+    logInText.classList.add('active');
+    nameInputContainer.style.display = 'none'; // Ascunde caseta cu numele
+  }
+
+       
+        resetForm();
+      }
+
+      async function myFunction(action) {
+        const name = document.getElementById('nameInput').value;
+        const email = document.getElementById('emailInput').value;
+        const password = document.getElementById('passwordInput').value;
+
+        try {
+          let url;
+          let body;
+
+          if (action === 'signup') {
+            url = 'http://localhost:3000/signup';
+            body = JSON.stringify({ name, email, password });
+          } else if (action === 'login') {
+            url = 'http://localhost:3000/login';
+            body = JSON.stringify({ email, password });
+          }
+
+          const response = await fetch(url, {
+            method: 'POST',
+            headers: {
+              'Content-Type': 'application/json'
+            },
+            body
+          });
+
+          const data = await response.json();
+          alert(data.message);
+
+          if (response.ok && action === 'signup') {
+            document.querySelector('.submit.gray').classList.remove('gray');
+            document.querySelector('.submit:not(.gray)').classList.add('gray');
+          } else if (response.ok && action === 'login') {
+            // Redirect către home.html sau executați alte acțiuni dorite pentru logare cu succes
+            alert('Log In cu succes! Redirect către home.html...');
+            window.location.href = '/CSU-pages/html/home.html';
+          }
+        } catch (error) {
+          console.error('Eroare:', error);
+        }
+      }
+    </script>
+  </div>
+</body>
+</html>

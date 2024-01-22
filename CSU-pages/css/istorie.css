@@ -1,0 +1,501 @@
+.istorie-page {
+    /* background-color: #ffffff; */
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+  }
+  
+  .istorie-page .div {
+    /* background-color: #ffffff; */
+    overflow: hidden;
+    width: 1440px;
+    height: 1314px;
+    position: relative;
+  }
+
+  body {
+     /* overflow: hidden;  */
+    /* width: 100%; */
+    height: 100%;
+    position: relative;
+    background-color:  #6f6fa7;
+  }
+  
+  .istorie-page .subsol {
+    display: flex;
+    width: 1440px;
+    height: 255px;
+    align-items: center;
+    justify-content: center;
+    gap: 102px;
+    padding: 40px 0px;
+    position: absolute;
+    top: 1059px;
+    left: 0;
+    background-color: #d5d5e8;
+  }
+  
+  .istorie-page .frame {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    position: relative;
+    flex: 0 0 auto;
+    margin-top: -1.5px;
+    margin-bottom: -1.5px;
+  }
+  
+  .istorie-page .sigla {
+    position: relative;
+    width: 178px;
+    height: 178px;
+    object-fit: cover;
+    top:-20px;
+  }
+  
+  .istorie-page .date-de-contact {
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    position: relative;
+    flex: 0 0 auto;
+  }
+  
+  .istorie-page .text-wrapper {
+    position: relative;
+    width: fit-content;
+    margin-top: -1px;
+    font-family: "Poppins-Bold", Helvetica;
+    font-weight: 700;
+    color: #ffffff;
+    font-size: 24px;
+    letter-spacing: 0;
+    line-height: normal;
+  }
+  
+  .istorie-page .text-wrapper-2 {
+    position: relative;
+    width: fit-content;
+    font-family: "Poppins-Bold", Helvetica;
+    font-weight: 700;
+    color: #ffffff;
+    font-size: 24px;
+    letter-spacing: 0;
+    line-height: normal;
+  }
+  
+  .istorie-page .retele {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 47px;
+    position: relative;
+    flex: 0 0 auto;
+  }
+
+  .istorie-page .facebook {
+    position: relative;
+    width: 48px;
+    height: 48px;
+    transition: transform 0.3s ease-in-out;
+  }
+
+  .istorie-page .facebook:hover {
+    transform: scale(1.1);
+  }
+
+  .istorie-page .instagram {
+    position: relative;
+    width: 48px;
+    height: 48px;
+    transition: transform 0.3s ease-in-out;
+  }
+
+  .istorie-page .instagram:hover {
+    transform: scale(1.1);
+  }
+
+  .istorie-page .youtube {
+    position: relative;
+    width: 48px;
+    height: 48px;
+    transition: transform 0.3s ease-in-out;
+  }
+
+  .istorie-page .youtube:hover {
+    transform: scale(1.1);
+  }
+
+  .istorie-page .twitter {
+    position: relative;
+    width: 48px;
+    height: 48px;
+    transition: transform 0.3s ease-in-out;
+  }
+
+  .istorie-page .twitter:hover {
+    transform: scale(1.1);
+  }
+
+  .istorie-page .tik_tok {
+    position: relative;
+    width: 48px;
+    height: 48px;
+    transition: transform 0.3s ease-in-out;
+  }
+
+  .istorie-page .tik_tok:hover {
+    transform: scale(1.1);
+  }
+  
+  .istorie-page .img {
+    position: relative;
+    width: 48px;
+    height: 48px;
+  }
+  
+  .istorie-page .parteneri {
+    display: flex;
+    width: 1440px;
+    height:140px;
+    align-items: center;
+    justify-content: center;
+    gap: 57px;
+    padding: 40px 0px;
+    position: relative;
+    top: 872px;
+    background-color: #6f6fa7;
+    box-shadow: 0px 4px 4px #00000040;
+  }
+  
+  .istorie-page .pepenero {
+    position: relative;
+    width: 150px;
+    height: 40px;
+    top: 30px;
+    object-fit: cover;
+    transition: transform 0.3s ease-in-out;
+  }
+
+  .istorie-page .pepenero:hover {
+    transform: scale(1.1);
+    }
+  
+  .istorie-page .mihu {
+    position: relative;
+    width: 180px;
+    height: 60px;
+    top: 30px;
+    object-fit: cover;
+    transition: transform 0.3s ease-in-out;
+  }
+
+  .istorie-page .mihu:hover {
+    transform: scale(1.1);
+    }
+  
+  
+  .istorie-page .celestin {
+    position: relative;
+    /* width: 280px;
+    height: 90px; */
+    top: 30px;
+    object-fit: cover;
+    transition: transform 0.3s ease-in-out;
+  }
+
+  .istorie-page .celestin:hover {
+    transform: scale(1.1);
+    }
+  
+  
+  .istorie-page .vivendi {
+    position: relative;
+    width: 160px;
+    height: 60px;
+    object-fit: cover;
+    top: 30px;
+    transition: transform 0.3s ease-in-out;
+  }
+
+  .istorie-page .vivendi:hover {
+    transform: scale(1.1);
+    }
+  
+  .istorie-page .iulius-mall {
+    position: relative;
+    width: 89.52px;
+    height: 107px;
+    top: 30px;
+    object-fit: cover;
+    transition: transform 0.3s ease-in-out;
+  }
+
+  .istorie-page .iulius-mall:hover {
+    transform: scale(1.1);
+    }
+  
+  .istorie-page .urban {
+    position: relative;
+    /* width: 270px;
+    height: 107px; */
+    object-fit: cover;
+    top: 30px;
+    transition: transform 0.3s ease-in-out;
+  }
+
+  .istorie-page .urban:hover {
+    transform: scale(1.1);
+    }
+  
+  .istorie-page .body {
+    display: flex;
+    flex-direction: column;
+    width: 1440px;
+    height: 582px;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    padding: 35px 200px;
+    position: absolute;
+    top: 290px;
+    left: 0;
+    background-color: #d5d5e8;
+  }
+  
+  .istorie-page .text-wrapper-3 {
+    position: relative;
+    width: 1050px;
+    margin-left: -5px;
+    margin-right: 420px;
+    font-family: "Poppins-Bold", Helvetica;
+    font-weight: 700;
+    color: #3f3f95;
+    font-size: 40px;
+    letter-spacing: -2.4px;
+    line-height: normal;
+  }
+  
+  .istorie-page .portari {
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+    position: relative;
+    flex: 0 0 auto;
+    margin-left: -5px;
+    margin-right: -5px;
+  }
+  
+  .istorie-page .lorem-ipsum-is {
+    position: relative;
+    width: 1300px;
+    text-align: center;
+    margin-top: 20px;
+    font-family: "Poppins-Regular", Helvetica;
+    font-weight: 400;
+    color: #000000;
+    font-size: 20px;
+    letter-spacing: -1.2px;
+    line-height: normal;
+    right: 200px;
+  }
+  
+  .istorie-page .p {
+    position: relative;
+    width: 1300px;
+    text-align: center;
+    font-family: "Poppins-Regular", Helvetica;
+    font-weight: 400;
+    color: #000000;
+    font-size: 20px;
+    letter-spacing: -1.2px;
+    line-height: normal;
+    right: 200px;
+  }
+  
+  .istorie-page .club-tab {
+    display: flex;
+    flex-direction: column;
+    width: 1440px;
+    height: 176px;
+    align-items: center;
+    justify-content: center;
+    gap: 13px;
+    padding: 40px 0px;
+    position: absolute;
+    top: 114px;
+    left: 0;
+    background-color: #6f6fa7;
+    box-shadow: 0px 4px 4px #00000040;
+  }
+  
+  .istorie-page .text-wrapper-4 {
+    position: relative;
+    width: 1067px;
+    margin-top: -31.5px;
+    font-family: "Poppins-Bold", Helvetica;
+    font-weight: 700;
+    color: #ffffff;
+    font-size: 64px;
+    letter-spacing: -3.84px;
+    line-height: normal;
+  }
+  
+  .istorie-page .tab {
+    display: flex;
+    width: 1064px;
+    align-items: center;
+    gap: 36px;
+    position: relative;
+    flex: 0 0 auto;
+    margin-bottom: -29.5px;
+  }
+  
+  .istorie-page .underlined-tag {
+    display: inline-flex;
+    height: 46px;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    position: relative;
+    flex: 0 0 auto;
+    border-bottom-width: 5px;
+    border-bottom-style: solid;
+    border-color: #3f3f95;
+  }
+  
+  .istorie-page .text-wrapper-5 {
+    position: relative;
+    width: fit-content;
+    font-family: "Poppins-Bold", Helvetica;
+    font-weight: 700;
+    color: #ffffff;
+    font-size: 24px;
+    letter-spacing: -1.44px;
+    line-height: normal;
+  }
+
+  .istorie-page .text-wrapper-5:hover{
+    color: #82d5e8;
+  }
+  
+  .istorie-page .linie {
+    position: relative;
+    flex: 0 0 auto;
+    background-color: #3f3f95;
+  }
+  
+  .istorie-page .nav-bar {
+    display: flex;
+    width: 1440px;
+    height: 114px;
+    align-items: center;
+    justify-content: center;
+    gap: 62px;
+    padding: 12px 0px;
+    top: 7px;
+    left: (100% - 1440px) /2;
+    background-color: #d5d5e8;
+    overflow: hidden;
+    position: fixed;
+    box-shadow:0 4px 6px #3f3f95;
+  }
+  
+  .istorie-page .butoane {
+    display: inline-flex;
+    height: 124px;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    padding: 12px 0px;
+    position: relative;
+    flex: 0 0 auto;
+    margin-top: -17px;
+    margin-bottom: -17px;
+    background-color: #d5d5e8;
+  }
+  
+  .istorie-page .sigla-2 {
+    position: relative;
+    width: 85px;
+    height: 85px;
+    object-fit: cover;
+  }
+  
+  .istorie-page .div-2 {
+    display: inline-flex;
+    height: 123px;
+    align-items: center;
+    justify-content: center;
+    gap: 4px;
+    position: relative;
+    flex: 0 0 auto;
+    margin-top: -11.5px;
+    margin-bottom: -11.5px;
+  }
+  
+  .istorie-page .text-wrapper-6 {
+    position: relative;
+    width: fit-content;
+    font-family: "Poppins-Bold", Helvetica;
+    font-weight: 700;
+    color: #3f3f95;
+    font-size: 24px;
+    letter-spacing: 0;
+    line-height: normal;
+  }
+
+  .istorie-page .text-wrapper-6:hover {
+    color: #82d5e8; /* Change the color on hover */
+  }
+  
+  .istorie-page .vector {
+    position: relative;
+    width: 21px;
+    height: 13px;
+    margin-right: -2px;
+  }
+  
+  .istorie-page .vector-2 {
+    position: relative;
+    width: 19px;
+    height: 13px;
+  }
+  
+  .istorie-page .log-in {
+    display: inline-flex;
+    height: 124px;
+    align-items: center;
+    justify-content: center;
+    padding: 12px 0px;
+    position: relative;
+    flex: 0 0 auto;
+    margin-top: -17px;
+    margin-bottom: -17px;
+    background-color: #d5d5e8;
+  }
+  
+  .istorie-page .STAFF-TAG {
+    display: inline-flex;
+    height: 123px;
+    align-items: center;
+    justify-content: center;
+    gap: 11px;
+    position: relative;
+    flex: 0 0 auto;
+    margin-top: -11.5px;
+    margin-bottom: -11.5px;
+  }
+  
+  .istorie-page .user-icon {
+    position: relative;
+    width: 31px;
+    height: 32px;
+  }
+  

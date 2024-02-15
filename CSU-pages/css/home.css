@@ -608,7 +608,7 @@
     overflow: hidden;
   }
   
-  .home-page .div-3 {
+  /* .home-page .div-3 {
     display: grid;
     width: 1046px;
     align-items: center;
@@ -617,9 +617,9 @@
     position: relative;
     flex: 0 0 auto;
     overflow-x: auto;
-    white-space: nowrap;
+    white-space: nowrap; */
     /* grid-template-columns:repeat(10,1fr); */
-  }
+  /* } */
   
   .home-page .text-wrapper-8 {
     position: relative;
@@ -942,4 +942,84 @@
     border: 4px solid;
     border-color: #3f3f95;
   }
-  
+  .carousel {
+    height: 60vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    perspective: 100rem;
+}
+
+.carousel__cards {
+    position: relative;
+    width: 20rem;
+    height: 20rem;
+    transform-style: preserve-3d;
+    transform: translateZ(-25rem);
+    transition: transform 0.3s ease-in;
+}
+
+.carousel__img {
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+}
+.carousel__card {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    border: 2px solid white;
+    border-radius: 0.2rem;
+    font-size: 3em;
+    font-weight: 700;
+}
+
+.carousel__btn {
+    outline: none;
+    border: none;
+    border-radius: 0.2rem;
+    background: #3f3f95;
+    padding: 0.5em 1em;
+    font-size: 1.2em;
+    font-weight: 500;
+    color: #ffffff;
+    cursor: pointer;
+    margin: 0 2rem;
+    margin-top: 20px;
+}
+
+.carousel__btn:hover {
+    transform: scale(1.04);
+    background: #000000;
+  }
+
+  .carousel__card:nth-child(1) {
+    transform: rotateY(0deg) translateZ(25rem);
+  }
+  .carousel__card:nth-child(2) {
+    transform: rotateY(45deg) translateZ(25rem);
+  }
+  .carousel__card:nth-child(3) {
+    transform: rotateY(90deg) translateZ(25rem);
+  }
+  .carousel__card:nth-child(4) {
+    transform: rotateY(135deg) translateZ(25rem);
+  }
+  .carousel__card:nth-child(5) {
+    transform: rotateY(180deg) translateZ(25rem);
+  }
+  .carousel__card:nth-child(6) {
+    transform: rotateY(225deg) translateZ(25rem);
+  }
+  .carousel__card:nth-child(7) {
+    transform: rotateY(270deg) translateZ(25rem);
+  }
+  .carousel__card:nth-child(8) {
+    transform: rotateY(315deg) translateZ(25rem);
+  }
+  .carousel__card:nth-child(9) {
+    transform: rotateY(360deg) translateZ(25rem);
+  }
+

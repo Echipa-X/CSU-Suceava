@@ -39,6 +39,47 @@ document.addEventListener('DOMContentLoaded', function () {
     }
   });
 
+    // Obțineți elementul select
+var selectField = document.getElementById('editie');
+var fixedDiv = document.getElementById('frame');
+var contentToHide_2023 = document.getElementById("2023");
+var contentToHide_2024 = document.getElementById("2024");
+// Adăugați un eveniment pentru când se schimbă selecția
+selectField.addEventListener('change', function(event) {
+  var selectedOption = event.target.value;
+  switch (selectedOption) {
+    case '2022':
+      contentToHide_2023.style.display="none";
+      contentToHide_2024.style.display="none";
+      break;
+    case '2023':
+      contentToHide_2024.style.display="none";
+      contentToHide_2023.style.display="block";
+      break;
+    case '2024':
+      contentToHide_2023.style.display="none";
+      contentToHide_2024.style.display="block";
+  }
+});
+
+var selectField_campionat = document.getElementById('campionat');
+
+// Adăugați un eveniment pentru când se schimbă selecția
+selectField_campionat.addEventListener('change', function(event) {
+var selectedOption_campionat = event.target.value;
+  switch (selectedOption_campionat) {
+    case 'LIGA_1':
+      contentToHide_2023.style.display="none";
+      contentToHide_2024.style.display="none";
+      break;
+    case 'LIGA_2':
+      contentToHide_2024.style.display="none";
+      contentToHide_2023.style.display="block";
+      break;
+  }
+});
+
+
   var navbarmeciuri = document.getElementById('tab');
 
   // Adaugă un ascultător de eveniment de clic pe bara de navigare
@@ -129,6 +170,7 @@ document.addEventListener('DOMContentLoaded', function () {
           window.location.href = 'https://www.youtube.com/@CSUSuceava'; 
     }
   });
+
 });
 function changeColor(id)
 {

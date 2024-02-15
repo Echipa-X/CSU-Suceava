@@ -52,20 +52,20 @@
     font-size: 20px;
     letter-spacing: -1.2px;
     line-height: normal;
-    right:30px;
+    right:-115px;
     top:-60px;
   }
 
   .club-page .frame-2 {
     display: inline-flex;
     justify-content: center;
+    width: 181px;
     gap: 10px;
     padding: 10px;
     flex: 0 0 auto;
     background-color: #6f6fa7;
     align-items: center;
     position: relative;
-    right:-10px;
   }
 
   .club-page .text-wrapper-5 {
@@ -96,7 +96,7 @@
     background-color: #6f6fa7;
     align-items: center;
     position: relative;
-    right:300px;
+    right:10px;
   }
   
   .club-page .vector-4 {

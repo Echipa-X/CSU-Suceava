@@ -276,6 +276,7 @@
     background-color: #6f6fa7;
     align-items: center;
     position: relative;
+    
   }
   
   .last-results-page .vector-4 {
@@ -294,7 +295,6 @@
     margin-left: -5px;
     margin-right: -5px;
     align-items: center;
-    position: relative;
   }
   
   .last-results-page .text-wrapper-6 {

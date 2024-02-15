@@ -7,9 +7,10 @@
   </head>
   <body>
     <div class="news-page-ADMIN">
+      <div class="divv">
       <div class="nav-bar">
         <div class="butoane" id="navbar">
-          <img class="sigla" src="/CSU-pages/imagini/Sigla.png" />
+          <img class="sigla" src="/CSU-pages/imagini/Sigla.png" id="home_page"/>
           <div class="div">
             <div class="text-wrapper">CLUB</div>
             <!-- <img class="vector" src="/CSU-pages/imagini/Vector.png" /> -->
@@ -18,15 +19,16 @@
           <div class="text-wrapper">NOUTATI</div>
           <div class="text-wrapper">PERSONAL</div>
           <div class="text-wrapper">PARTENERI</div>
-          <!-- <div class="div">
+          <div class="div">
             <div class="text-wrapper">JUNIOR</div>
             <img class="img" src="/CSU-pages/imagini/Vector.png" />
-          </div> -->
+          </div>
         </div>
         <div class="log-in">
           <div class="STAFF-TAG">
             <div class="text-wrapper">ADMIN</div>
             <img class="user-icon" src="/CSU-pages/imagini/User Icon@3x.png" />
+            <div id="logout-button" class="text-wrapper-6-1" style="display: none;">Logout</div>
           </div>
         </div>
       </div>
@@ -37,11 +39,12 @@
         </div>
         <div class="frame-2">
           <div class="div-2">
-            <div class="text-wrapper-4">TITLU:</div>
+            <div class="text-wrapper-4"> Titlu:</div>
+            <div class="div-wrapper"><textarea id="description-input" class="text-wrapper-7" placeholder="Scrie titlul..."></textarea></div>
             <div class="frame-3"></div>
           </div>
           <div class="div-2">
-            <div class="text-wrapper-5">Media:</div>
+            <div class="text-wrapper-5">  Media:</div>
             <div id="upload-container" class="frame-4">
               <img class="file-dock-duotone" src="/CSU-pages/imagini/File_dock_duotone_line@3x.png" />
               <div class="text-wrapper-6">Încarcă imagini sau videoclipuri.</div>
@@ -50,7 +53,7 @@
             </div>
           </div>
           <div class="div-2">
-            <div class="text-wrapper-5">Descriere:</div>
+            <div class="text-wrapper-5-1">Descriere:</div>
             <div class="div-wrapper"><textarea id="description-input" class="text-wrapper-7" placeholder="Scrie despre această știre..."></textarea></div>
           </div>
         </div>
@@ -59,7 +62,7 @@
           <div class="frame"><div class="text-wrapper-3">PLANIFICĂ</div></div>
         </div>
       </div>
-      <div class="parteneri">
+      <div class="parteneri" id="parteneri">
         <img class="pepenero" src="/CSU-pages/imagini/pepenero.png" />
             <img class="mihu" src="/CSU-pages/imagini/mihu.png" />
             <img class="celestin" src="/CSU-pages/imagini/celestin.png" />
@@ -74,14 +77,15 @@
           <div class="text-wrapper-9">Telefon: _____________</div>
           <p class="text-wrapper-9">Adresa: Str. Universității, Jud. Suceava</p>
         </div>
-        <div class="retele">
-          <img class="img" src="/CSU-pages/imagini/Facebook.png" />
-            <img class="img" src="/CSU-pages/imagini/Instagram.png" />
-            <img class="img" src="/CSU-pages/imagini/X.png" />
-            <img class="img" src="/CSU-pages/imagini/YouTube.png" />
-            <img class="img" src="/CSU-pages/imagini/TikTok.png" />
-        </div>
+        <div class="retele" id="retele">
+          <img class="facebook" src="/CSU-pages/imagini/Facebook.png" />
+          <img class="instagram" src="/CSU-pages/imagini/Instagram.png" />
+          <img class="twitter" src="/CSU-pages/imagini/X.png" />
+          <img class="youtube" src="/CSU-pages/imagini/YouTube.png" />
+          <img class="tik_tok" src="/CSU-pages/imagini/TikTok.png" />
       </div>
+      </div>
+    </div>
     </div>
     <script src="/CSU-pages/js/adaugastire.js">
       

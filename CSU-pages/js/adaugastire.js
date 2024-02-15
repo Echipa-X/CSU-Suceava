@@ -1,12 +1,4 @@
 document.addEventListener('DOMContentLoaded', function () {
-  const username = localStorage.getItem('username');
-  const loggedIn = localStorage.getItem('loggedIn');
-
-  // Verifică dacă utilizatorul este autentificat
-  if (loggedIn === 'true' && username) {
-      // Dacă este autentificat, afișează numele utilizatorului în locul butonului "LOGIN"
-      document.getElementById('login-button').textContent = username;
-  }
   var navbar = document.getElementById('navbar');
 
     // Adaugă un ascultător de eveniment de clic pe bara de navigare
@@ -44,7 +36,7 @@ document.addEventListener('DOMContentLoaded', function () {
     // Adaugă un ascultător de eveniment de clic pe bara de navigare
     home_page.addEventListener('click', function (event) {
       // Verifică dacă elementul pe care s-a făcut clic este un element "div" cu clasa "text-wrapper-9"
-      if (event.target.tagName === 'IMG' && event.target.classList.contains('img-2')) {
+      if (event.target.tagName === 'IMG' && event.target.classList.contains('sigla')) {
         // Obține textul din interiorul elementului pe care s-a făcut clic
         window.location.href = '/CSU-pages/html/home.html';
       }

@@ -41,17 +41,28 @@
       </div>
       <div class="body">
         <div class="frame">
-          <!-- <div class="text-wrapper-4">Caută după:</div>
+          <div class="text-wrapper-4">Caută după:</div>
           <div class="frame-2">
             <div class="text-wrapper-5">Campionat</div>
-            <img class="vector-3" src="/CSU-pages/imagini/Vector.png" />
+            <select id="campionat" name="campionat">
+              <option value="" disabled selected style="display: none;"></option>
+              <option value="LIGA_1">LIGA 1</option>
+              <option value="LIGA_2">LIGA 2</option>
+            </select>
           </div>
           <div class="frame-3">
             <div class="text-wrapper-5">Ediție</div>
-            <img class="vector-4" src="/CSU-pages/imagini/Vector.png" />
-          </div> -->
+            <!-- <img class="vector-4" src="/CSU-pages/imagini/Vector.png" /> -->
+            <select id="editie" name="editie" title="Selectați ediția">
+              <option value="" disabled selected style="display: none;"></option>
+              <option value="2022">2022</option>
+              <option value="2023">2023</option>
+              <option value="2024">2024</option>
+            </select> 
+            <label id="messageLabel"></label>
+          </div>
         </div>
-        <div class="frame-4">
+        <div class="frame-4" id="2024">
           <div class="text-wrapper-6">IANUARIE 2024</div>
           <div class="meci">
             <div class="div-2">
@@ -102,7 +113,7 @@
             </div>
           </div>
         </div>
-        <div class="frame-4">
+        <div class="frame-4" id="2023">
           <div class="text-wrapper-6">DECEMBRIE 2023</div>
           <div class="meci">
             <div class="div-2">

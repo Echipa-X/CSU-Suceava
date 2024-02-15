@@ -37,6 +37,11 @@
     </div>
 
     <script>
+       function isValidEmail(email) {
+  // Expresia regulată pentru verificarea formatului adresei de e-mail
+  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  return emailRegex.test(email);
+}
       function toggleForm(action) {
         const signUpText = document.querySelector('.title:nth-child(1)');
         const logInText = document.querySelector('.title:nth-child(3)');
@@ -44,7 +49,25 @@
         const nameInput = document.getElementById('nameInput');
         const emailInputContainer = document.getElementById('emailInputContainer');
         const passwordInput = document.getElementById('passwordInput');
-        
+      // Verificare dacă numele este necesar pentru înregistrare și dacă este completat
+  // Verificare dacă numele este necesar pentru înregistrare și dacă este completat
+  if (action === 'signup' && !nameInput.value) {
+        alert('Introduceți numele.');
+        return;
+    }
+
+    // Verificare dacă adresa de e-mail și parola sunt completate pentru înregistrare
+    if (action === 'signup' && (!emailInputContainer.value || !passwordInput.value)) {
+        alert('Completați adresa de e-mail și parola.');
+        return;
+    }
+
+    // Verificare dacă adresa de e-mail este validă pentru înregistrare
+    if (action === 'signup' && !isValidEmail(emailInputContainer.value)) {
+        alert('Introduceți o adresă de e-mail validă.');
+        return;
+    }
+
    if (action === 'signup') {
     signUpText.classList.add('active');
     logInText.classList.remove('active');
@@ -58,12 +81,21 @@
        
         resetForm();
       }
-
+     
       async function myFunction(action) {
         const name = document.getElementById('nameInput').value;
         const email = document.getElementById('emailInput').value;
         const password = document.getElementById('passwordInput').value;
-
+// Verificați dacă câmpurile obligatorii sunt completate
+if (!email || !password) {
+    alert('Completați adresa de e-mail și parola.');
+    return;
+  }
+  if (isValidEmail(email)) {
+  console.log("Adresa de e-mail este validă.");
+} else {
+  console.log("Adresa de e-mail nu este validă.");
+}
         try {
           let url;
           let body;
@@ -93,6 +125,8 @@
           } else if (response.ok && action === 'login') {
             // Redirect către home.html sau executați alte acțiuni dorite pentru logare cu succes
             alert('Log In cu succes! Redirect către home.html...');
+            localStorage.setItem('loggedIn', 'true');
+            localStorage.setItem('username', data.username); 
             window.location.href = '/CSU-pages/html/home.html';
           }
         } catch (error) {

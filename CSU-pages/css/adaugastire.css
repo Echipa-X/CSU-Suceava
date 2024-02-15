@@ -281,6 +281,13 @@
     background-color: #b3b8c7;
   }
   
+  
+  .news-page-ADMIN .div-2 textarea {
+    width: 100%;
+    height: 150px; /* sau orice înălțime dorită */
+    resize: vertical; /* permite redimensionarea doar în direcția verticală */
+  }
+  
   .news-page-ADMIN .text-wrapper-7 {
     position: relative;
     width: fit-content;

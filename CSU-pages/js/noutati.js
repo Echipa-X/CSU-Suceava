@@ -1,7 +1,29 @@
+const username = localStorage.getItem('username');
+const loginButton = document.getElementById('login-button');
+const logoutButton = document.getElementById('logout-button');
+const adaugaButton = document.getElementById('adauga-button');
+console.log('Numele utilizatorului a fost stocat cu succes în localStorage:', username);
+ console.log(adaugaButton);
+
+if (username) {
+    loginButton.textContent = username;
+    logoutButton.style.display = 'block'; // Afiseaza butonul de deconectare
+   if(username === 'Admin'){
+    adaugaButton.style.display = 'block';}
+  }
+ 
+ 
+logoutButton.addEventListener('click', function () {
+    localStorage.removeItem('username'); // Elimină informațiile de conectare din localStorage
+    window.location.reload(); // Reîmprospătează pagina
+});
+adaugaButton.addEventListener('click', function() {
+window.location.href = '/CSU-Pages/html/adaugastire.html';
+});
 document.addEventListener('DOMContentLoaded', function () {
     // Obține elementul cu id-ul "navbar"
+   
     var navbar = document.getElementById('navbar');
-
     // Adaugă un ascultător de eveniment de clic pe bara de navigare
     navbar.addEventListener('click', function (event) {
       // Verifică dacă elementul pe care s-a făcut clic este un element "div" cu clasa "text-wrapper-9"
@@ -28,6 +50,14 @@ document.addEventListener('DOMContentLoaded', function () {
             break;
           // Adaugă cazuri pentru celelalte pagini
         }
+      }
+    });
+    var log_in = document.getElementById('navbar2');
+    log_in.addEventListener('click', function (event) {
+      // Verifică dacă elementul pe care s-a făcut clic este un element "div" cu clasa "text-wrapper-9"
+      if (event.target.tagName === 'DIV' && event.target.classList.contains('text-wrapper-6-1')) {
+        // Obține textul din interiorul elementului pe care s-a făcut clic
+        window.location.href = '/CSU-pages/html/LogInSignUp.html';
       }
     });
 

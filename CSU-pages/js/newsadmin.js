@@ -1,6 +1,14 @@
 document.addEventListener('DOMContentLoaded', function () {
-    // Obține elementul cu id-ul "navbar"
-    var navbar = document.getElementById('navbar');
+  const username = localStorage.getItem('username');
+  const loggedIn = localStorage.getItem('loggedIn');
+
+  // Verifică dacă utilizatorul este autentificat
+  if (loggedIn === 'true' && username) {
+      // Dacă este autentificat, afișează numele utilizatorului în locul butonului "LOGIN"
+      document.getElementById('login-button').textContent = username;
+  }
+  var navbar = document.getElementById('navbar');
+
 
     // Adaugă un ascultător de eveniment de clic pe bara de navigare
     navbar.addEventListener('click', function (event) {

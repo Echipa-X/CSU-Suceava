@@ -1,6 +1,22 @@
+const username = localStorage.getItem('username');
+      console.log('Numele utilizatorului a fost stocat cu succes în localStorage:', username);
+       var loginButton = document.getElementById('login-button');
+       var logoutButton = document.getElementById('logout-button');
+      if (username) {
+        
+          loginButton.textContent = username;
+          logoutButton.style.display = 'block';
+      }
+    
+logoutButton.addEventListener('click', function () {
+    localStorage.removeItem('username'); // Elimină informațiile de conectare din localStorage
+    window.location.reload(); // Reîmprospătează pagina
+});
 document.addEventListener('DOMContentLoaded', function () {
     // Obține elementul cu id-ul "navbar"
+   
     var navbar = document.getElementById('navbar');
+
 
     // Adaugă un ascultător de eveniment de clic pe bara de navigare
     navbar.addEventListener('click', function (event) {
@@ -64,7 +80,14 @@ document.addEventListener('DOMContentLoaded', function () {
         }
       }
     });
-
+    var log_in = document.getElementById('navbar2');
+    log_in.addEventListener('click', function (event) {
+      // Verifică dacă elementul pe care s-a făcut clic este un element "div" cu clasa "text-wrapper-9"
+      if (event.target.tagName === 'DIV' && event.target.classList.contains('text-wrapper-7')) {
+        // Obține textul din interiorul elementului pe care s-a făcut clic
+        window.location.href = '/CSU-pages/html/LogInSignUp.html';
+      }
+    });
 
     var home_page = document.getElementById('home_page');
     // Adaugă un ascultător de eveniment de clic pe bara de navigare

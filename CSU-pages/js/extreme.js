@@ -1,6 +1,7 @@
 document.addEventListener('DOMContentLoaded', function () {
-    // Obține elementul cu id-ul "navbar"
-    var navbar = document.getElementById('navbar');
+  
+  var navbar = document.getElementById('navbar');
+
   
     // Adaugă un ascultător de eveniment de clic pe bara de navigare
     navbar.addEventListener('click', function (event) {

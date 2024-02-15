@@ -42,15 +42,16 @@
           </div>
           <div class="div-2">
             <div class="text-wrapper-5">Media:</div>
-            <div class="frame-4">
+            <div id="upload-container" class="frame-4">
               <img class="file-dock-duotone" src="/CSU-pages/imagini/File_dock_duotone_line@3x.png" />
               <div class="text-wrapper-6">Încarcă imagini sau videoclipuri.</div>
               <div class="text-wrapper-6">Limită max. 1GB</div>
+              <input type="file" id="file-input" style="display: none;" accept="image/*, video/*">
             </div>
           </div>
           <div class="div-2">
             <div class="text-wrapper-5">Descriere:</div>
-            <div class="div-wrapper"><div class="text-wrapper-7">Scrie despre această știre...</div></div>
+            <div class="div-wrapper"><textarea id="description-input" class="text-wrapper-7" placeholder="Scrie despre această știre..."></textarea></div>
           </div>
         </div>
         <div class="header-2">
@@ -82,6 +83,8 @@
         </div>
       </div>
     </div>
-    <script src="/CSU-pages/js/adaugastire.js"></script>
+    <script src="/CSU-pages/js/adaugastire.js">
+      
+    </script>
   </body>
 </html>

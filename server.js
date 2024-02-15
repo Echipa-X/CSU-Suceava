@@ -1,7 +1,7 @@
 const express = require('express');
 const mongoose = require('mongoose');
 const bodyParser = require('body-parser');
-
+const authRoutes = require('./routes/authRoutes');
 const User = require('./models/User'); 
 
 // Importă routerele pentru entitățile respective
@@ -43,6 +43,32 @@ app.use('/roluri', rolRouter);
 app.use('/personal', personalRouter);
 app.use('/log_in', logInRouter);
 
+// Autentificare utilizator
+app.post('/login', async (req, res) => {
+  const { email, password } = req.body;
+
+  try {
+    // Verificăm în baza de date dacă există un utilizator cu adresa de email și parola furnizate
+    const user = await User.findOne({ email, password });
+
+    if (!user) {
+      return res.status(401).json({ message: 'Autentificare eșuată. Verificați adresa de email și parola.' });
+    }
+
+    // Verificăm rolul utilizatorului
+    if (user.role === 'admin') {
+      return res.status(200).json({ message: 'Autentificare cu succes! Ești logat ca administrator.' , username:user.name});
+    } else {
+      return res.status(200).json({ message: 'Autentificare cu succes!', username:user.name });
+    }
+   
+  } catch (error) {
+    console.error('Eroare la autentificare:', error);
+    return res.status(500).json({ message: 'Eroare la autentificare', error: error.message });
+  }
+});
+
+// Înregistrare utilizator nou
 app.post('/signup', async (req, res) => {
   const { name, email, password } = req.body;
   console.log('Received data:', name, email, password);
@@ -57,27 +83,7 @@ app.post('/signup', async (req, res) => {
   }
 });
 
-app.post('/login', async (req, res) => {
-  const { email, password } = req.body;
-
-  try {
-    // Verificăm în baza de date dacă există un utilizator cu adresa de email și parola furnizate
-    const user = await User.findOne({ email, password });
-
-    if (user) {
-      res.status(200).json({ message: 'Autentificare cu succes!' });
-    } else {
-      res.status(401).json({ message: 'Autentificare eșuată. Verificați adresa de email și parola.' });
-    }
-  } catch (error) {
-    console.error('Eroare la autentificare:', error);
-    res.status(500).json({ message: 'Eroare la autentificare', error: error.message });
-  }
-});
-
-
-// ... Restul codului din server.js
-
+// Restul codului rămâne neschimbat
 
 // Rulare server
 app.listen(port, () => {
@@ -86,17 +92,8 @@ app.listen(port, () => {
 
 const path = require('path');
 
-// ...
-
 // Definește ruta pentru fișierul home.html
-// Adăugați aceste linii după definirea app cu express()
-// Adaugă această linie înainte de definirea rutelor
 app.use(express.static(__dirname));
-
-// Restul codului rămâne neschimbat
-
-
-// Definește ruta pentru fișierul home.html
 app.get('/', (req, res) => {
   res.sendFile(path.join(__dirname, '/CSU-pages/html/home.html'));
 });

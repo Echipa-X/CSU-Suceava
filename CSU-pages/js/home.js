@@ -46,7 +46,7 @@ document.addEventListener('DOMContentLoaded', function () {
           case 'CALENDAR':
             window.location.href = '/CSU-pages/html/calendar.html';
             break;
-          case 'NOUTATI':
+          case 'NOUTĂȚI':
             window.location.href = '/CSU-pages/html/noutati.html';
             break;
           case 'PARTENERI':

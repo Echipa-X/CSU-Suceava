@@ -1,3 +1,17 @@
+const username = localStorage.getItem('username');
+      console.log('Numele utilizatorului a fost stocat cu succes în localStorage:', username);
+       var loginButton = document.getElementById('login-button');
+       var logoutButton = document.getElementById('logout-button');
+      if (username) {
+        
+          loginButton.textContent = username;
+          logoutButton.style.display = 'block';
+      }
+    
+logoutButton.addEventListener('click', function () {
+    localStorage.removeItem('username'); // Elimină informațiile de conectare din localStorage
+    window.location.reload(); // Reîmprospătează pagina
+});
 document.addEventListener('DOMContentLoaded', function () {
   
     var navbar = document.getElementById('navbar');
@@ -17,7 +31,7 @@ document.addEventListener('DOMContentLoaded', function () {
         case 'CALENDAR':
           window.location.href = '/CSU-pages/html/calendar.html';
           break;
-        case 'NOUTATI':
+        case 'NOUTĂȚI':
           window.location.href = '/CSU-pages/html/noutati.html';
           break;
         case 'PARTENERI':

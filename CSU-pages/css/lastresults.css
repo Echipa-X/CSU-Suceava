@@ -5,6 +5,17 @@
   width: 100%;
   }
 
+  .last-results-page .text-wrapper-6-1 {
+    position: relative;
+    width: fit-content;
+    font-family: "Poppins-Bold", Helvetica;
+    font-weight: 700;
+    color: #3f3f95;
+    font-size: 24px;
+    letter-spacing: 0;
+    line-height: normal;
+  }
+
   body {
     /* overflow: hidden;  */
    /* width: 100%; */

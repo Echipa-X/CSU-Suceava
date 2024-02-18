@@ -20,9 +20,35 @@ logoutButton.addEventListener('click', function () {
 adaugaButton.addEventListener('click', function() {
 window.location.href = '/CSU-Pages/html/adaugastire.html';
 });
-document.addEventListener('DOMContentLoaded', function () {
-    // Obține elementul cu id-ul "navbar"
-   
+document.addEventListener('DOMContentLoaded', async function () {
+  // try {
+  //   const response = await fetch('/stiri');
+  //   if (!response.ok) {
+  //     throw new Error('A apărut o eroare la încărcarea știrilor.');
+  //   }
+  //   const stiri = await response.json();
+
+  //   // Iterează prin fiecare știre și înlocuiește conținutul imaginii și titlului direct în HTML
+  //   stiri.forEach((stire, index) => {
+  //     // Selectează elementele pentru imagine și titlu
+  //     const imgElement = document.querySelector('.rectangle');
+  //     const divWrapperElement = document.querySelector('.div-wrapper');
+  //     const pElement = document.querySelector('.p a');
+
+  //     // Înlocuiește imaginea
+  //     imgElement.src = stire.imagineUrl; // Verifică dacă imagineUrl este calea corectă către imagine
+
+  //     // Înlocuiește titlul și linkul
+  //     pElement.textContent = stire.titlu;
+  //     pElement.href = `/CSU-pages/html/individualnews.html?id=${index}`;
+
+  //     // Afiseaza elementele care nu mai sunt necesare
+  //     divWrapperElement.style.display = 'block';
+  //   });
+  // } catch (error) {
+  //   console.error('Eroare:', error);
+  // }
+
     var navbar = document.getElementById('navbar');
     // Adaugă un ascultător de eveniment de clic pe bara de navigare
     navbar.addEventListener('click', function (event) {

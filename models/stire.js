@@ -1,16 +1,17 @@
-// models/stire.js
-const mongoose = require('mongoose');
-const Schema = mongoose.Schema;
 
-const stireSchema = new Schema({
-  ID_Stire: { type: Schema.Types.ObjectId, ref: 'Stire' },
-  Titlu_Stire: String,
-  Continut_Stire: String,
-  Data_Publicarii: Date,
-  Autor: String
+const mongoose = require('mongoose');
+
+const stireSchema = new mongoose.Schema({
+  title: {
+    type: String,
+    required: true
+  },
+  image: {
+    type: String,
+    required: true
+  }
 });
 
 const Stire = mongoose.model('Stire', stireSchema);
-
 
 module.exports = Stire;

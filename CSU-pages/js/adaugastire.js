@@ -1,4 +1,64 @@
-document.addEventListener('DOMContentLoaded', function () {
+document.addEventListener('DOMContentLoaded', async function () {
+   const errorMessage = document.getElementById('error-message');
+
+    // Selectează elementul care declanșează adăugarea de știri noi
+    const triggerElement = document.querySelector('.header .frame .text-wrapper-3');
+
+    // Ascultă evenimentul de clic pe elementul care declanșează adăugarea de știri noi
+    triggerElement.addEventListener('click', async function () {
+        const title = document.getElementById('titlu-input').value;
+        const image = document.getElementById('file-input').files[0];
+
+        const formData = new FormData();
+        formData.append('title', title);
+        formData.append('image', image);
+
+        try {
+            const response = await fetch('/adauga-stire', {
+                method: 'POST',
+                body: formData
+            });
+
+            if (!response.ok) {
+                throw new Error('Failed to add data');
+            }
+
+            // Resetează valorile input-urilor după trimiterea cu succes a datelor
+            document.getElementById('titlu-input').value = '';
+            document.getElementById('file-input').value = '';
+
+        } catch (error) {
+            errorMessage.textContent = error.message;
+        }
+    });
+
+  form.addEventListener('submit', async (event) => {
+    event.preventDefault();
+    const nameInput = document.getElementById('name');
+    const ageInput = document.getElementById('age');
+    const name = nameInput.value.trim();
+    const age = parseInt(ageInput.value.trim(), 10);
+    if (!name || !age) {
+      errorMessage.textContent = 'Please provide both name and age';
+      return;
+    }
+    if (isNaN(age)) {
+      errorMessage.textContent = 'Age must be a number';
+      return;
+    }
+    const response = await fetch('/api/data', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({ name, age }),
+    });
+    if (!response.ok) {
+      errorMessage.textContent = 'Failed to add data';
+      return;
+    }
+    window.location.href = '/';
+  });
   var navbar = document.getElementById('navbar');
 
     // Adaugă un ascultător de eveniment de clic pe bara de navigare
